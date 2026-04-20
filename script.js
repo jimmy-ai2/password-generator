@@ -10,6 +10,7 @@ const generateButton = document.getElementById("generate-btn");
 const copyButton = document.getElementById("copy-btn");
 const strengthBar = document.querySelector(".strength-bar");
 const strengthText = document.querySelector(".strength-container p");
+const strengthLabel = document.getElementById("strength-label");
 
 // Character sets
 const uppercaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -44,6 +45,52 @@ function makePassword() {
   );
 
   passwordInput.value = newPassword;
+  updateStrengthMeter(newPassword);
+}
+
+function updateStrengthMeter(password) {
+  const passwordLength = password.length;
+  const hasUppercase = /[A-Z]/.test(password);
+  const hasLowercase = /[a-z]/.test(password);
+  const hasNumbers = /[0-9]/.test(password);
+  const hasSymbols = /[!@#$%^&*()\-=_+[\]{}|;:,.<>?]/.test(password);
+
+  let strengthScore = 0;
+
+  //   Maximum is 40
+  strengthScore += Math.min(passwordLength * 2, 40);
+
+  if (hasUppercase) strengthScore += 15;
+  if (hasLowercase) strengthScore += 15;
+  if (hasNumbers) strengthScore += 15;
+  if (hasSymbols) strengthScore += 15;
+
+  //   Enforce minimum score for every short password
+  if (passwordLength < 8) {
+    strengthScore = Math.min(strengthScore, 40);
+  }
+  const safeScore = Math.max(5, Math.min(100, strengthScore));
+  strengthBar.style.width = safeScore + "%";
+
+  let StrengthLabelText = "";
+  let barColor = "";
+
+  if (strengthScore < 40) {
+    // Weak Password
+    barColor = "#fc8181";
+    StrengthLabelText = "Weak";
+  } else if (strengthScore < 70) {
+    // Medium Password
+    barColor = "#fbd38d";
+    StrengthLabelText = "Medium";
+  } else {
+    // Strong Password
+    barColor = "#68d391";
+    StrengthLabelText = "Strong";
+  }
+
+  strengthBar.style.backgroundColor = barColor;
+  strengthLabel.textContent = StrengthLabelText;
 }
 
 function createRandomPassword(
