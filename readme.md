@@ -3,10 +3,14 @@
 A simple and responsive web app for generating strong and secure passwords.  
 Built with **Vanilla JavaScript** to create customizable passwords instantly in the browser.
 
+[Live Demo](https://jimmy-ai2.github.io/password-generator/)
+
 ## About
 
 This project helps users improve their online security by generating random, complex passwords.  
 All generation happens on the client side — no data is stored or sent anywhere.
+
+<img width="1646" height="905" alt="Password generator snap" src="https://github.com/user-attachments/assets/64e2cae2-5130-49a4-954f-57f80ae49235" />
 
 ## Features
 
