@@ -1,60 +1,100 @@
 # Password Generator
 
-A simple and responsive web app for generating strong and secure passwords.  
-Built with **Vanilla JavaScript** to create customizable passwords instantly in the browser.
+A sleek, responsive web application that generates secure, randomized passwords based on user-defined criteria.  
+It helps users create strong credentials to improve online security.
 
-[Live Demo](https://jimmy-ai2.github.io/password-generator/)
-
-## About
-
-This project helps users improve their online security by generating random, complex passwords.  
-All generation happens on the client side — no data is stored or sent anywhere.
-
-<img width="1646" height="905" alt="Password generator snap" src="https://github.com/user-attachments/assets/64e2cae2-5130-49a4-954f-57f80ae49235" />
+---
 
 ## Features
 
-- Generate passwords with adjustable length (6–24 characters)
-- Include uppercase, lowercase, numbers, and symbols
-- Real-time password strength indicator
-- One-click copy to clipboard
-- Instant password generation on settings change
-- Responsive and modern UI design
+- **Customizable Length**  
+  Generate passwords between 6 and 24 characters using a range slider.
+
+- **Character Control**  
+  Choose to include:
+  - Uppercase letters  
+  - Lowercase letters  
+  - Numbers  
+  - Symbols  
+
+- **Strength Meter**  
+  Real-time feedback showing password strength (Weak, Medium, Strong).
+
+- **One-Click Copy**  
+  Copy generated passwords instantly with visual confirmation.
+
+- **Instant Generation**  
+  Automatically generates a password when the page loads.
+
+- **Responsive Design**  
+  Optimized for both desktop and mobile devices.
+
+---
 
 ## Tech Stack
 
-- **HTML5** – structure
-- **CSS3** – styling, Flexbox, and gradients
-- **JavaScript (ES6+)** – logic and DOM manipulation
-- **Font Awesome** – icons
-- **Google Fonts (Montserrat)** – typography
+- **HTML5** – Structure of the interface  
+- **CSS3** – Styling with Flexbox, variables, and gradients  
+- **JavaScript (ES6+)** – Core functionality  
+  - DOM manipulation  
+  - Regex for strength validation  
+  - Clipboard API for copy functionality  
+- **Font Awesome** – Icons  
+- **Google Fonts** – Montserrat  
+
+---
+
+## Live Demo
+[Check out the Live Demo](https://jimmy-ai2.github.io/password-generator/)
+
+---
 
 ## How to Use
 
-1. Open `index.html` in your browser
+1. **Adjust Length**  
+   Use the slider to set password length.
 
-2. Customize your password:
-   - Set desired length using the slider
-   - Select character types (uppercase, lowercase, numbers, symbols)
+2. **Select Options**  
+   Choose which character types to include.
 
-3. Click **Generate Password**
+3. **Generate Password**  
+   Click the *Generate Password* button.
 
-4. Copy the password using the clipboard button
+4. **Copy Password**  
+   Click the copy icon to save it to clipboard.
 
-## Key Concepts
+5. **Check Strength**  
+   View the strength indicator for security level.
 
-- **Random string generation**
-- **DOM manipulation** for UI updates
-- **Event handling** for user input
-- **Password strength logic**
+---
+
+## Screenshots
+<img width="1646" height="905" alt="Password generator snap" src="https://github.com/user-attachments/assets/64e2cae2-5130-49a4-954f-57f80ae49235" />
+
+---
 
 ## Future Improvements
 
-- Password history
-- Dark mode toggle
-- Exclude similar characters (e.g., 0, O, l, 1)
-- Auto-copy option
+- Dark mode  
+- Exclude ambiguous characters (e.g., 0, O, l, 1)  
+- Password history  
+- Auto-copy option  
+
+---
+
+## About
+
+This project focuses on building a practical security tool using **Vanilla JavaScript**, combining random string generation with user-controlled customization.
+
+It emphasizes **user experience (UX)** through real-time feedback, clean UI design, and fully client-side processing to ensure privacy and security.
+
+---
 
 ## Author
 
-Built as a project to practice **string manipulation**, **user input handling**, and **interactive UI design** using JavaScript.
+**Jimmy Chege**  
+- GitHub: https://github.com/jimmy-ai2
+
+---
+
+⭐ *If you like this project, feel free to star the repo!*
