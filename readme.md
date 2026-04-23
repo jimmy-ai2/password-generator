@@ -92,7 +92,7 @@ It emphasizes **user experience (UX)** through real-time feedback, clean UI desi
 
 ## Author
 
-**Jimmy Chege**  
+**Jimmy Gichui**  
 - GitHub: https://github.com/jimmy-ai2
 
 ---
